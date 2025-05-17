@@ -15,8 +15,18 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  // Smooth scroll function for navigation
+  const scrollToSection = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  };
+
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen overflow-hidden">
       <Navbar />
       <Hero />
       <About />
