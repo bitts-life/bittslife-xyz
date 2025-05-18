@@ -1,36 +1,37 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 230 25% 12%;
-    --foreground: 210 20% 98%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
-    --card: 230 25% 14%;
-    --card-foreground: 210 20% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
 
-    --popover: 230 25% 12%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 183 90% 75%;
-    --primary-foreground: 230 25% 12%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 266 70% 80%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 230 20% 20%;
-    --muted-foreground: 210 20% 80%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 266 70% 80%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 230 20% 20%;
-    --input: 230 20% 20%;
-    --ring: 183 90% 75%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
 
     --radius: 0.5rem;
   }
@@ -38,11 +39,11 @@
 
 @layer base {
   * {
-    @apply border-border selection:bg-coder-accent/20 selection:text-white;
+    @apply border-border;
   }
 
   body {
-    @apply bg-coder-darkest text-foreground;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     scroll-behavior: smooth;
   }
@@ -52,15 +53,15 @@
   }
   
   .card-gradient {
-    @apply bg-gradient-to-br from-coder-dark to-coder-darker;
+    @apply bg-gradient-to-br from-white to-gray-50;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:shadow-coder-accent/20 hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
   
   .project-card {
-    @apply relative overflow-hidden rounded-lg bg-coder-dark border border-coder-accent/20 shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-coder-accent/30;
+    @apply relative overflow-hidden rounded-lg bg-white border border-gray-200 shadow-md transition-all duration-300 hover:shadow-xl;
   }
   
   .project-card:hover .project-overlay {
@@ -68,15 +69,15 @@
   }
   
   .project-overlay {
-    @apply absolute inset-0 bg-coder-darker/90 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-white;
+    @apply absolute inset-0 bg-black/80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-white;
   }
 
   .code-block {
-    @apply bg-coder-darker border border-coder-accent/20 rounded-md p-4 font-mono text-sm;
+    @apply bg-gray-100 border border-gray-200 rounded-md p-4 font-mono text-sm;
   }
   
   .glow-border {
-    @apply border border-coder-accent/40 animate-glow-pulse;
+    @apply border border-primary/40 shadow-sm;
   }
 }
 

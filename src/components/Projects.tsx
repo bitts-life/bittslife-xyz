@@ -41,10 +41,10 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-coder-darker">
+    <section id="projects" className="section-padding bg-gray-50">
       <div className="container mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">My Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
             Here are some of my key Android development projects, showcasing my skills and experience with major brands.
           </p>
@@ -61,18 +61,18 @@ const Projects = () => {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-60 object-cover object-center brightness-75"
+                  className="w-full h-60 object-cover object-center"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-coder-darkest/80"></div>
+                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/50"></div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-white">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="outline" className="bg-muted border-coder-accent/20 text-coder-accent font-medium">
+                    <Badge key={tagIndex} variant="outline" className="bg-primary/10 border-primary/20 text-primary font-medium">
                       {tag}
                     </Badge>
                   ))}
@@ -81,15 +81,15 @@ const Projects = () => {
               
               <div className="project-overlay">
                 <div className="space-y-4 text-center">
-                  <h3 className="text-xl font-bold text-coder-accent">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
                   <div className="flex justify-center gap-4">
-                    <Button variant="secondary" size="sm" asChild className="bg-coder-dark hover:bg-coder-dark/80 text-white">
+                    <Button variant="secondary" size="sm" asChild>
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
                         <Github className="h-4 w-4 mr-2" />
                         Source Code
                       </a>
                     </Button>
-                    <Button size="sm" asChild className="bg-coder-accent hover:bg-coder-accent/80 text-coder-darkest">
+                    <Button size="sm" asChild>
                       <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo

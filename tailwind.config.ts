@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -53,16 +54,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				android: {
-					DEFAULT: '#64FFDA',
+					DEFAULT: '#3DDC84',
 					dark: '#073042',
 					light: '#E8F5E9'
-				},
-				coder: {
-					dark: '#1E1E2E',
-					darker: '#181825',
-					darkest: '#11111B',
-					accent: '#89DCEB',
-					highlight: '#CBA6F7'
 				}
 			},
 			borderRadius: {
@@ -92,8 +86,8 @@ export default {
 					'100%': { transform: 'scale(1)', opacity: '1' }
 				},
 				'glow-pulse': {
-					'0%, 100%': { boxShadow: '0 0 4px 1px rgba(51, 195, 240, 0.4)' },
-					'50%': { boxShadow: '0 0 8px 2px rgba(51, 195, 240, 0.65)' }
+					'0%, 100%': { boxShadow: '0 0 4px 1px rgba(0, 0, 0, 0.1)' },
+					'50%': { boxShadow: '0 0 8px 2px rgba(0, 0, 0, 0.2)' }
 				}
 			},
 			animation: {
