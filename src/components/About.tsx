@@ -1,35 +1,42 @@
 
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Calendar, Briefcase, Book } from "lucide-react";
+import { Calendar, Briefcase, Book, Award } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { value: "5+", label: "Years Experience" },
-    { value: "20+", label: "Projects Completed" },
-    { value: "15+", label: "Happy Clients" },
+    { value: "6+", label: "Years Experience" },
+    { value: "90%", label: "Test Coverage" },
+    { value: "30%", label: "App Size Reduction" },
   ];
 
   const experiences = [
     {
-      title: "Senior Android Developer",
-      company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description: "Lead the development of flagship Android applications using Kotlin, Jetpack Compose, and MVVM architecture. Improved app performance by 40%.",
+      title: "Android Consultant",
+      company: "Walmart (via Xebia)",
+      period: "Oct 2023 - Present",
+      description: "Working on the Walmart App focusing on Cart Checkout and Transactions (CXO). Designed and implemented the OmniScheduler Module, reducing scheduling time for Oil & Tire Change services by 30%.",
       icon: Briefcase,
     },
     {
-      title: "Android Developer",
-      company: "Mobile Solutions Ltd.",
-      period: "2019 - 2021",
-      description: "Developed and maintained multiple Android applications with Java and Kotlin. Implemented modern architectural patterns and CI/CD pipelines.",
+      title: "Senior Software Engineer",
+      company: "BlueStone",
+      period: "April 2021 - Sept 2023",
+      description: "Reduced app size by 30% using ProGuard. Developed features increasing user retention by 20%. Optimized performance reducing crash rates by 35% with Firebase Crashlytics.",
       icon: Briefcase,
     },
     {
-      title: "Bachelor of Computer Science",
-      company: "Tech University",
-      period: "2015 - 2019",
-      description: "Specialized in Mobile Application Development and Software Engineering with honors.",
+      title: "Android Application Developer",
+      company: "NoBroker",
+      period: "Dec 2019 - June 2020",
+      description: "Integrated Adobe SDK for analytics. Developed property recommendation features and implemented Call Masking for partner app security.",
+      icon: Briefcase,
+    },
+    {
+      title: "B.Tech. in Computer Science",
+      company: "Rajasthan Technical University",
+      period: "2013 - 2017",
+      description: "Graduated with specialization in Android development and mobile technologies.",
       icon: Book,
     },
   ];
@@ -40,8 +47,8 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Passionate Android developer with a focus on creating beautiful, 
-            performant, and accessible mobile applications.
+            Passionate Android developer with a focus on creating high-performance, 
+            scalable, and user-friendly mobile applications.
           </p>
         </div>
 
@@ -61,19 +68,30 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
             <div className="space-y-4">
               <p>
-                I'm a dedicated Android developer with 5+ years of experience in creating mobile applications 
-                that are not only visually appealing but also highly functional and user-friendly.
+                I'm an accomplished Android developer with 6+ years of experience in designing and 
+                developing high-performance, scalable mobile applications with millions of downloads.
               </p>
               <p>
-                My journey in Android development began when I discovered my passion for creating mobile 
-                experiences that could impact people's daily lives. Since then, I've worked on a variety 
-                of applications, from small utility apps to large-scale enterprise solutions.
+                My expertise lies in Kotlin, Java, Jetpack, MVVM, and CI/CD, with a proven track record 
+                of reducing app size by 30%, enhancing test coverage to 90%, and optimizing performance.
               </p>
               <p>
-                I specialize in Kotlin, Java, Jetpack Compose, Material Design, MVVM architecture, 
-                and various Android frameworks and libraries. I'm always exploring new technologies 
-                and methodologies to stay at the forefront of Android development.
+                Throughout my career at companies like Xebia (Walmart), BlueStone, and NoBroker, 
+                I've specialized in application architecture, performance optimization, and delivering 
+                exceptional user experiences. I'm passionate about writing clean, maintainable, and 
+                efficient code that solves real user problems.
               </p>
+              <div className="mt-6 bg-android/10 p-4 rounded-lg">
+                <h4 className="font-semibold mb-2 flex items-center gap-2">
+                  <Award className="h-5 w-5 text-android" />
+                  Certifications
+                </h4>
+                <ul className="list-disc pl-5 space-y-1 text-sm">
+                  <li>Android Development Essential Training – Manage Data with Kotlin</li>
+                  <li>Concurrent Programming with Android Threads, Workers, and Kotlin Coroutines</li>
+                  <li>Hackerrank Java Basic Certification</li>
+                </ul>
+              </div>
             </div>
           </div>
 

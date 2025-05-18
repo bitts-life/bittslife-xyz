@@ -7,34 +7,34 @@ import { Github, ExternalLink } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "FitnessBuddy",
-      description: "A comprehensive fitness tracking app with workout plans, nutrition tracking, and progress analytics.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      tags: ["Kotlin", "MVVM", "Room", "Material Design"],
+      title: "Walmart OmniScheduler",
+      description: "Developed the OmniScheduler Module for Walmart's app, reducing scheduling time for Oil & Tire Change services by 30% and increasing appointment bookings by 25%.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      tags: ["Kotlin", "MVVM", "Adapter Delegation", "ViewModels", "API Integration"],
       github: "#",
       liveDemo: "#",
     },
     {
-      title: "WeatherNow",
-      description: "Real-time weather forecasting application with location-based updates and interactive maps.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
-      tags: ["Jetpack Compose", "Retrofit", "LiveData", "Google Maps API"],
-      github: "#",
-      liveDemo: "#",
-    },
-    {
-      title: "ShopSmart",
-      description: "E-commerce application with product catalog, cart functionality, payment integration, and order tracking.",
+      title: "BlueStone Mobile App",
+      description: "Revamped Browse and Product pages, optimized app performance resulting in a 35% reduction in crash rates by integrating Firebase Crashlytics and reduced app size by 30%.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      tags: ["Kotlin", "Firebase", "Coroutines", "MVVM"],
+      tags: ["Kotlin", "Firebase", "Jetpack Compose", "ProGuard", "Analytics"],
       github: "#",
       liveDemo: "#",
     },
     {
-      title: "MindfulnessApp",
-      description: "Meditation and mindfulness app with guided sessions, progress tracking, and customizable experiences.",
+      title: "NoBroker Partner App",
+      description: "Implemented Call Masking using Broadcast Receiver, securing user privacy. Integrated Adobe SDK for analytics and user engagement tracking.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      tags: ["Firebase", "Broadcast Receiver", "Analytics", "Security"],
+      github: "#",
+      liveDemo: "#",
+    },
+    {
+      title: "OpenUp App",
+      description: "Built a business social network for SMEs with image editing, video sharing, and payment gateway features. Integrated multiple authentication methods.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      tags: ["Kotlin", "ExoPlayer", "WorkManager", "Room"],
+      tags: ["Custom UI", "Payment Gateway", "Auth APIs", "Media Processing"],
       github: "#",
       liveDemo: "#",
     },
@@ -46,7 +46,7 @@ const Projects = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Here are some of my recent Android development projects, showcasing my skills and experience.
+            Here are some of my key Android development projects, showcasing my skills and experience with major brands.
           </p>
         </div>
 

@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowDown, Github, Linkedin, Code, CheckCircle } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Phone, Code, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -29,20 +29,20 @@ const Hero = () => {
             </p>
           </div>
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-            Turning Vision Into <span className="text-android">Reality</span> With Code
+            SHUBHAM <span className="text-android">SHARMA</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-            I don't just build Android apps — I craft digital experiences that captivate users 
-            and drive business growth with pixel-perfect execution.
+            Android Developer with 6+ years of experience in designing and developing high-performance, 
+            scalable mobile applications with millions of downloads.
           </p>
           
           <div className="space-y-6">
             <ul className="space-y-2">
               {[
                 "Kotlin & Java Expert",
-                "5+ Years of Android Development",
-                "Google Play Featured Developer",
-                "20+ Successful App Launches"
+                "6+ Years of Android Development",
+                "90% Test Coverage Achievement",
+                "Reduced App Size by 30%"
               ].map((item, i) => (
                 <li key={i} className="flex items-center gap-2">
                   <CheckCircle className="h-5 w-5 text-android" />
@@ -67,6 +67,7 @@ const Hero = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-android-dark/5 hover:bg-android-dark/10 p-3 rounded-full transition-colors"
+              aria-label="Github"
             >
               <Github className="h-6 w-6 text-android-dark" />
             </a>
@@ -75,8 +76,23 @@ const Hero = () => {
               target="_blank" 
               rel="noopener noreferrer"
               className="bg-android-dark/5 hover:bg-android-dark/10 p-3 rounded-full transition-colors"
+              aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6 text-android-dark" />
+            </a>
+            <a 
+              href="mailto:shubhamoksharma@gmail.com" 
+              className="bg-android-dark/5 hover:bg-android-dark/10 p-3 rounded-full transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="h-6 w-6 text-android-dark" />
+            </a>
+            <a 
+              href="tel:+919672460166" 
+              className="bg-android-dark/5 hover:bg-android-dark/10 p-3 rounded-full transition-colors"
+              aria-label="Phone"
+            >
+              <Phone className="h-6 w-6 text-android-dark" />
             </a>
           </div>
           
@@ -93,7 +109,7 @@ const Hero = () => {
               ))}
             </div>
             <p className="text-sm">
-              <span className="font-semibold">20+ clients</span> worldwide trust my development expertise
+              <span className="font-semibold">Trusted by industry leaders</span> including Walmart and BlueStone
             </p>
           </div>
         </div>
@@ -108,8 +124,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-android to-android-dark rounded-full"></div>
               <div className="absolute inset-3 bg-white rounded-full overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                  alt="Profile" 
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7" 
+                  alt="Shubham Sharma" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -118,31 +134,34 @@ const Hero = () => {
             {/* Floating achievement badges */}
             <div className="absolute top-5 -left-6 bg-white py-2 px-4 rounded-lg shadow-lg animate-fade-in" style={{animationDelay: "0.5s"}}>
               <p className="text-xs font-bold flex items-center gap-1">
-                <span className="text-android">★</span> Kotlin Expert
+                <span className="text-android">★</span> Walmart Consultant
               </p>
             </div>
             <div className="absolute top-1/3 -right-8 bg-white py-2 px-4 rounded-lg shadow-lg animate-fade-in" style={{animationDelay: "0.7s"}}>
               <p className="text-xs font-bold flex items-center gap-1">
-                <span className="text-android">★</span> 5+ Years Experience
+                <span className="text-android">★</span> 6+ Years Experience
               </p>
             </div>
             <div className="absolute bottom-10 left-1/6 bg-white py-2 px-4 rounded-lg shadow-lg animate-fade-in" style={{animationDelay: "0.9s"}}>
               <p className="text-xs font-bold flex items-center gap-1">
-                <span className="text-android">★</span> 20+ Apps Published
+                <span className="text-android">★</span> Jetpack Compose Expert
               </p>
             </div>
             
             {/* Code snippet overlay */}
-            <div className="absolute -bottom-10 -right-10 bg-android-dark/90 text-android p-4 rounded-lg shadow-lg transform rotate-6 w-40 h-40 overflow-hidden text-xs font-mono animate-fade-in" style={{animationDelay: "1.1s"}}>
+            <div className="absolute -bottom-10 -right-10 bg-android-dark/90 text-android p-4 rounded-lg shadow-lg transform rotate-6 w-42 h-42 overflow-hidden text-xs font-mono animate-fade-in" style={{animationDelay: "1.1s"}}>
               <pre className="opacity-80">
-{`fun main() {
-  val dev = AndroidDev(
-    skills = listOf(
-      "Kotlin",
-      "Jetpack"
-    )
+{`class ShubhamSharma {
+  val skills = listOf(
+    "Kotlin",
+    "MVVM",
+    "Jetpack Compose",
+    "CI/CD"
   )
-  dev.buildApp()
+  
+  fun buildApp() {
+    // Magic happens here
+  }
 }`}
               </pre>
             </div>

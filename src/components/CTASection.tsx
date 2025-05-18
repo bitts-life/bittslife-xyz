@@ -29,10 +29,10 @@ const CTASection = () => {
               <div className="inline-block p-3 bg-android/20 rounded-full mb-4">
                 <Calendar className="h-8 w-8 text-android" />
               </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready to Elevate Your Android Presence?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4">Ready to Build Your Next Android App?</h2>
               <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Let's collaborate to create a standout Android application that captivates users and 
-                drives your business success — book your free consultation today.
+                With 6+ years of experience and a track record of enhancing app performance by 30%, 
+                I can help turn your vision into a high-performing Android application.
               </p>
             </div>
             
@@ -41,12 +41,12 @@ const CTASection = () => {
                 <div className="mx-auto w-12 h-12 flex items-center justify-center bg-android rounded-full mb-4">
                   <Phone className="h-5 w-5 text-android-dark" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Schedule a Call</h3>
+                <h3 className="text-xl font-bold mb-2">Quick Consultation</h3>
                 <p className="text-white/70 mb-4">Let's discuss your project requirements and goals</p>
                 <Button 
                   className="bg-android hover:bg-android/90 text-android-dark font-bold w-full"
                 >
-                  Book a Call
+                  Call +91-9672460166
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
@@ -58,8 +58,8 @@ const CTASection = () => {
                 <div className="mx-auto w-12 h-12 flex items-center justify-center bg-android-dark rounded-full mb-4">
                   <Calendar className="h-5 w-5 text-android" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Free Consultation</h3>
-                <p className="text-android-dark/70 mb-4">Get expert advice on your Android app strategy</p>
+                <h3 className="text-xl font-bold mb-2">Book a Meeting</h3>
+                <p className="text-android-dark/70 mb-4">Schedule a detailed discussion about your Android project</p>
                 <Button 
                   className="bg-android-dark hover:bg-android-dark/90 text-white font-bold w-full"
                 >
@@ -72,20 +72,20 @@ const CTASection = () => {
                 <div className="mx-auto w-12 h-12 flex items-center justify-center bg-android rounded-full mb-4">
                   <Download className="h-5 w-5 text-android-dark" />
                 </div>
-                <h3 className="text-xl font-bold mb-2">Portfolio & Process</h3>
-                <p className="text-white/70 mb-4">Learn more about my development approach</p>
+                <h3 className="text-xl font-bold mb-2">Download Resume</h3>
+                <p className="text-white/70 mb-4">Get my detailed resume with all projects and skills</p>
                 <Button 
                   variant="outline" 
                   className="border-white/30 text-white hover:bg-white/10 w-full"
                 >
-                  Download PDF
+                  Get CV
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </div>
             </div>
             
             <div className="text-center mt-10">
-              <p className="text-white/60 text-sm">No commitment required • 100% satisfaction guaranteed • Quick response time</p>
+              <p className="text-white/60 text-sm">Email: shubhamoksharma@gmail.com • Available for remote and on-site roles</p>
             </div>
           </div>
         </div>
