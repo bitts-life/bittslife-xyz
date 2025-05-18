@@ -22,8 +22,8 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
+    { name: "Blog", href: "#blog" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -31,13 +31,13 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-white/90 backdrop-blur-md shadow-md" : "bg-transparent"
+        isScrolled ? "bg-white shadow-md" : "bg-white"
       )}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a href="#home" className="flex items-center gap-2">
-          <Code className="h-8 w-8 text-android" />
-          <span className="text-xl font-bold">AndroidDev</span>
+          <Code className="h-7 w-7 text-android" />
+          <span className="text-xl font-bold">TheDroidDev</span>
         </a>
 
         {/* Mobile Menu Button */}
@@ -51,7 +51,7 @@ const Navbar = () => {
         </Button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -61,7 +61,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button>Download Resume</Button>
+          <Button className="bg-android text-white hover:bg-android-dark">
+            Download Resume
+          </Button>
         </nav>
 
         {/* Mobile Navigation */}
@@ -78,7 +80,9 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button>Download Resume</Button>
+              <Button className="bg-android text-white hover:bg-android-dark">
+                Download Resume
+              </Button>
             </nav>
           </div>
         )}

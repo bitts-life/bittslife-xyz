@@ -54,9 +54,9 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				android: {
-					DEFAULT: '#3DDC84',
-					dark: '#073042',
-					light: '#E8F5E9'
+					DEFAULT: '#8BC34A', // TheDroidLady green
+					dark: '#689F38',
+					light: '#DCEDC8'
 				}
 			},
 			borderRadius: {

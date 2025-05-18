@@ -41,7 +41,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-gray-50">
+    <section id="projects" className="section-padding bg-white">
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
@@ -54,16 +54,18 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className="project-card animate-fade-in" 
+              className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 animate-fade-in" 
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="relative">
+              <div className="relative h-48 overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-60 object-cover object-center"
+                  className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black/50"></div>
+                <div className="absolute top-0 left-0 bg-android text-white px-3 py-1">
+                  Project
+                </div>
               </div>
               
               <div className="p-6">
@@ -72,30 +74,25 @@ const Projects = () => {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="outline" className="bg-primary/10 border-primary/20 text-primary font-medium">
+                    <Badge key={tagIndex} variant="outline" className="bg-android/10 text-android-dark border-android/20">
                       {tag}
                     </Badge>
                   ))}
                 </div>
-              </div>
-              
-              <div className="project-overlay">
-                <div className="space-y-4 text-center">
-                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                  <div className="flex justify-center gap-4">
-                    <Button variant="secondary" size="sm" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        Source Code
-                      </a>
-                    </Button>
-                    <Button size="sm" asChild>
-                      <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </a>
-                    </Button>
-                  </div>
+                
+                <div className="flex justify-between">
+                  <Button variant="outline" size="sm" className="border-android text-android hover:bg-android/10" asChild>
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
+                      <Github className="h-4 w-4 mr-2" />
+                      Source
+                    </a>
+                  </Button>
+                  <Button size="sm" className="bg-android text-white hover:bg-android-dark" asChild>
+                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Project
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>
