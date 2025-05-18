@@ -72,7 +72,7 @@ const Projects = () => {
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag, tagIndex) => (
-                    <Badge key={tagIndex} variant="outline" className="bg-coder-accent/10 border-coder-accent/20 text-coder-highlight">
+                    <Badge key={tagIndex} variant="outline" className="bg-muted border-coder-accent/20 text-coder-accent font-medium">
                       {tag}
                     </Badge>
                   ))}
@@ -81,7 +81,7 @@ const Projects = () => {
               
               <div className="project-overlay">
                 <div className="space-y-4 text-center">
-                  <h3 className="text-xl font-bold text-coder-highlight">{project.title}</h3>
+                  <h3 className="text-xl font-bold text-coder-accent">{project.title}</h3>
                   <div className="flex justify-center gap-4">
                     <Button variant="secondary" size="sm" asChild className="bg-coder-dark hover:bg-coder-dark/80 text-white">
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -89,7 +89,7 @@ const Projects = () => {
                         Source Code
                       </a>
                     </Button>
-                    <Button size="sm" asChild className="bg-coder-accent hover:bg-coder-accent/80 text-white">
+                    <Button size="sm" asChild className="bg-coder-accent hover:bg-coder-accent/80 text-coder-darkest">
                       <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
                         Live Demo

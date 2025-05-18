@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -54,16 +53,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				android: {
-					DEFAULT: '#3DDC84',
+					DEFAULT: '#64FFDA',
 					dark: '#073042',
 					light: '#E8F5E9'
 				},
 				coder: {
-					dark: '#1A1F2C',
-					darker: '#161B24',
-					darkest: '#11151C',
-					accent: '#9b87f5',
-					highlight: '#33C3F0'
+					dark: '#1E1E2E',
+					darker: '#181825',
+					darkest: '#11111B',
+					accent: '#89DCEB',
+					highlight: '#CBA6F7'
 				}
 			},
 			borderRadius: {
@@ -109,4 +108,3 @@ export default {
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-
