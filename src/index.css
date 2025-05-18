@@ -5,14 +5,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 142 76% 55%;
     --primary-foreground: 210 40% 98%;
@@ -20,60 +20,30 @@
     --secondary: 196 83% 14%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 240 4% 16%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 142 15% 91%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 142 76% 55%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 142 76% 55%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 196 83% 14%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 142 15% 91%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 12 6% 15%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --border: 240 4% 16%;
+    --input: 240 4% 16%;
     --ring: 142 76% 55%;
+
+    --radius: 0.5rem;
   }
 }
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border selection:bg-coder-accent/20 selection:text-white;
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-coder-darkest text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
     scroll-behavior: smooth;
   }
@@ -83,15 +53,15 @@
   }
   
   .card-gradient {
-    @apply bg-gradient-to-br from-android-light to-white;
+    @apply bg-gradient-to-br from-coder-dark to-coder-darker;
   }
   
   .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-coder-accent/10 hover:-translate-y-1;
   }
   
   .project-card {
-    @apply relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-xl;
+    @apply relative overflow-hidden rounded-lg bg-coder-dark border border-coder-accent/10 shadow-md transition-all duration-300 hover:shadow-xl hover:shadow-coder-accent/20;
   }
   
   .project-card:hover .project-overlay {
@@ -99,6 +69,57 @@
   }
   
   .project-overlay {
-    @apply absolute inset-0 bg-android-dark/80 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-white;
+    @apply absolute inset-0 bg-coder-darker/90 opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-white;
   }
+
+  .code-block {
+    @apply bg-coder-darker border border-coder-accent/10 rounded-md p-4 font-mono text-sm;
+  }
+  
+  .glow-border {
+    @apply border border-coder-highlight/40 animate-glow-pulse;
+  }
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
 }

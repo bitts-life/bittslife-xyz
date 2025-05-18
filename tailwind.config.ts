@@ -57,6 +57,13 @@ export default {
 					DEFAULT: '#3DDC84',
 					dark: '#073042',
 					light: '#E8F5E9'
+				},
+				coder: {
+					dark: '#1A1F2C',
+					darker: '#161B24',
+					darkest: '#11151C',
+					accent: '#9b87f5',
+					highlight: '#33C3F0'
 				}
 			},
 			borderRadius: {
@@ -84,6 +91,10 @@ export default {
 				'scale-in': {
 					'0%': { transform: 'scale(0.95)', opacity: '0' },
 					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'glow-pulse': {
+					'0%, 100%': { boxShadow: '0 0 4px 1px rgba(51, 195, 240, 0.4)' },
+					'50%': { boxShadow: '0 0 8px 2px rgba(51, 195, 240, 0.65)' }
 				}
 			},
 			animation: {
@@ -91,9 +102,11 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in': 'fade-in 0.5s ease-out',
 				'slide-in': 'slide-in 0.5s ease-out',
-				'scale-in': 'scale-in 0.3s ease-out'
+				'scale-in': 'scale-in 0.3s ease-out',
+				'glow-pulse': 'glow-pulse 1.5s ease-in-out infinite'
 			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
 } satisfies Config;
+
