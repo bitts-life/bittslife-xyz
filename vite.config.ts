@@ -10,7 +10,9 @@ export default defineConfig(({ mode }) => ({
   //   port: 8080,
   // },
   plugins: [
-    react()],
+    react()
+  ],
+  page: "/bittslife-xyz/",
     // mode === 'development' &&
     // componentTagger(),
   // ].filter(Boolean),
