@@ -12,7 +12,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react()
   ],
-  page: "/bittslife-xyz/",
+  base: "/bittslife-xyz/",
     // mode === 'development' &&
     // componentTagger(),
   // ].filter(Boolean),
