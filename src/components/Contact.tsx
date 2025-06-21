@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
@@ -41,19 +40,19 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@androiddev.com",
-      link: "mailto:hello@androiddev.com",
+      value: "shubhamoksharma@gmail.com",
+      link: "mailto:shubhamoksharma@gmail.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+91-967-246-0166",
+      link: "tel:+919672460166",
     },
     {
       icon: MapPin,
       title: "Location",
-      value: "San Francisco, CA",
+      value: "Bangalore, IN",
       link: "#",
     },
   ];

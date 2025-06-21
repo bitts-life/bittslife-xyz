@@ -3,10 +3,12 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
     {
+      slug: "walmart-omnischeduler",
       title: "Walmart OmniScheduler",
       description: "Developed the OmniScheduler Module for Walmart's app, reducing scheduling time for Oil & Tire Change services by 30% and increasing appointment bookings by 25%.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
@@ -15,6 +17,7 @@ const Projects = () => {
       liveDemo: "https://play.google.com/store/apps/details?id=com.walmart.android",
     },
     {
+      slug: "bluestone-mobile",
       title: "BlueStone Mobile App",
       description: "Revamped Browse and Product pages, optimized app performance resulting in a 35% reduction in crash rates by integrating Firebase Crashlytics and reduced app size by 30%.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
@@ -23,6 +26,7 @@ const Projects = () => {
       liveDemo: "https://play.google.com/store/apps/details?id=com.bluestone.android",
     },
     {
+      slug: "nobroker-partner",
       title: "NoBroker Partner App",
       description: "Implemented Call Masking using Broadcast Receiver, securing user privacy. Integrated Adobe SDK for analytics and user engagement tracking.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
@@ -31,6 +35,7 @@ const Projects = () => {
       liveDemo: "https://play.google.com/store/apps/details?id=com.nobroker.partner",
     },
     {
+      slug: "openup-app",
       title: "OpenUp App",
       description: "Built a business social network for SMEs with image editing, video sharing, and payment gateway features. Integrated multiple authentication methods.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
@@ -66,18 +71,22 @@ const Projects = () => {
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover object-center"
-                />
+                <Link to={`/project/${project.slug}`}>
+                  <img 
+                    src={project.image} 
+                    alt={project.title}
+                    className="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500 cursor-pointer"
+                  />
+                </Link>
                 <div className="absolute top-0 left-0 bg-android text-white px-3 py-1">
                   Project
                 </div>
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <Link to={`/project/${project.slug}`}>
+                  <h3 className="text-xl font-bold mb-2 hover:text-android transition-colors cursor-pointer">{project.title}</h3>
+                </Link>
                 <p className="text-muted-foreground mb-4">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
@@ -98,14 +107,15 @@ const Projects = () => {
                     <Github className="h-4 w-4 mr-2" />
                     Source
                   </Button>
-                  <Button 
-                    size="sm" 
-                    className="bg-android text-white hover:bg-android-dark"
-                    onClick={() => handleDemoClick(project.liveDemo)}
-                  >
-                    <ExternalLink className="h-4 w-4 mr-2" />
-                    View Project
-                  </Button>
+                  <Link to={`/project/${project.slug}`}>
+                    <Button 
+                      size="sm" 
+                      className="bg-android text-white hover:bg-android-dark"
+                    >
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      View Details
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
