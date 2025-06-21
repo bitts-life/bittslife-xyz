@@ -5,6 +5,28 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleDownloadResume = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Shubham_Sharma_Resume.pdf';
+    link.click();
+  };
+
+  const handleCall = () => {
+    window.open('tel:+919672460166', '_self');
+  };
+
+  const handleEmail = () => {
+    window.open('mailto:shubhamoksharma@gmail.com', '_self');
+  };
+
   return (
     <section
       id="home"
@@ -45,48 +67,53 @@ const Hero = () => {
             </ul>
             
             <div className="flex flex-wrap gap-4 mt-4">
-              <Button size="lg" className="text-base bg-android hover:bg-android/90 text-white font-bold">
+              <Button 
+                size="lg" 
+                className="text-base bg-android hover:bg-android/90 text-white font-bold"
+                onClick={() => scrollToSection("projects")}
+              >
                 View My Work
               </Button>
-              <Button variant="outline" size="lg" className="text-base border-2">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-base border-2"
+                onClick={handleDownloadResume}
+              >
                 Download Resume
               </Button>
             </div>
           </div>
           
           <div className="flex gap-4 mt-4">
-            <a 
-              href="https://github.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            <button 
+              onClick={() => window.open('https://github.com/shubhamoksharma', '_blank')}
               className="bg-android/10 hover:bg-android/20 p-3 rounded-full transition-colors"
               aria-label="Github"
             >
               <Github className="h-6 w-6 text-android-dark" />
-            </a>
-            <a 
-              href="https://linkedin.com" 
-              target="_blank" 
-              rel="noopener noreferrer"
+            </button>
+            <button 
+              onClick={() => window.open('https://linkedin.com/in/shubhamoksharma', '_blank')}
               className="bg-android/10 hover:bg-android/20 p-3 rounded-full transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="h-6 w-6 text-android-dark" />
-            </a>
-            <a 
-              href="mailto:contact@thedroiddev.com" 
+            </button>
+            <button 
+              onClick={handleEmail}
               className="bg-android/10 hover:bg-android/20 p-3 rounded-full transition-colors"
               aria-label="Email"
             >
               <Mail className="h-6 w-6 text-android-dark" />
-            </a>
-            <a 
-              href="tel:+919672460166" 
+            </button>
+            <button 
+              onClick={handleCall}
               className="bg-android/10 hover:bg-android/20 p-3 rounded-full transition-colors"
               aria-label="Phone"
             >
               <Phone className="h-6 w-6 text-android-dark" />
-            </a>
+            </button>
           </div>
         </div>
         
@@ -118,14 +145,14 @@ const Hero = () => {
         </div>
       </div>
       
-      <a 
-        href="#about" 
+      <button 
+        onClick={() => scrollToSection("about")}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce"
       >
         <Button variant="ghost" size="icon" className="rounded-full">
           <ArrowDown className="h-6 w-6" />
         </Button>
-      </a>
+      </button>
     </section>
   );
 };

@@ -12,6 +12,17 @@ const Footer = () => {
       behavior: "smooth"
     });
   };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  const handleBookCall = () => {
+    window.open('https://calendly.com/shubhamoksharma', '_blank', 'noopener,noreferrer');
+  };
   
   return (
     <footer className="bg-android-dark text-white py-16 relative">
@@ -35,42 +46,44 @@ const Footer = () => {
               Crafting exceptional Android applications that deliver outstanding user experiences and help businesses succeed in the digital marketplace.
             </p>
             <div className="flex gap-4">
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              <button 
+                onClick={() => window.open('https://github.com/shubhamoksharma', '_blank', 'noopener,noreferrer')}
                 className="bg-white/10 p-2 rounded-full hover:bg-android hover:text-white transition-colors"
               >
                 <Github className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://linkedin.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
+              </button>
+              <button 
+                onClick={() => window.open('https://linkedin.com/in/shubhamoksharma', '_blank', 'noopener,noreferrer')}
                 className="bg-white/10 p-2 rounded-full hover:bg-android hover:text-white transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
-              </a>
-              <a 
-                href="mailto:hello@thedroiddev.com" 
+              </button>
+              <button 
+                onClick={() => window.open('mailto:shubhamoksharma@gmail.com', '_self')}
                 className="bg-white/10 p-2 rounded-full hover:bg-android hover:text-white transition-colors"
               >
                 <Mail className="h-5 w-5" />
-              </a>
+              </button>
             </div>
           </div>
           
           <div>
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              {['Home', 'About', 'Projects', 'Blog', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a 
-                    href={`#${item.toLowerCase()}`} 
-                    className="text-white/70 hover:text-android transition-colors"
+              {[
+                { name: 'Home', id: 'home' },
+                { name: 'About', id: 'about' },
+                { name: 'Projects', id: 'projects' },
+                { name: 'Blog', id: 'blog' },
+                { name: 'Contact', id: 'contact' }
+              ].map((item) => (
+                <li key={item.name}>
+                  <button 
+                    onClick={() => scrollToSection(item.id)}
+                    className="text-white/70 hover:text-android transition-colors cursor-pointer"
                   >
-                    {item}
-                  </a>
+                    {item.name}
+                  </button>
                 </li>
               ))}
             </ul>
@@ -81,12 +94,18 @@ const Footer = () => {
             <div className="space-y-4">
               <p className="flex items-start">
                 <Mail className="h-5 w-5 mr-3 mt-1 text-android" />
-                <span className="text-white/70">hello@thedroiddev.com</span>
+                <button 
+                  onClick={() => window.open('mailto:shubhamoksharma@gmail.com', '_self')}
+                  className="text-white/70 hover:text-android transition-colors cursor-pointer"
+                >
+                  shubhamoksharma@gmail.com
+                </button>
               </p>
               <p>
                 <span className="block text-white/70 mt-4">Want to work together? Schedule a consultation:</span>
                 <Button 
                   className="mt-2 bg-android hover:bg-android/90"
+                  onClick={handleBookCall}
                 >
                   Book a Call
                 </Button>
@@ -101,8 +120,18 @@ const Footer = () => {
           </p>
           
           <div className="flex gap-6 text-sm text-white/70">
-            <a href="#" className="hover:text-android transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-android transition-colors">Terms of Service</a>
+            <button 
+              onClick={() => window.open('#', '_blank')}
+              className="hover:text-android transition-colors cursor-pointer"
+            >
+              Privacy Policy
+            </button>
+            <button 
+              onClick={() => window.open('#', '_blank')}
+              className="hover:text-android transition-colors cursor-pointer"
+            >
+              Terms of Service
+            </button>
           </div>
         </div>
       </div>

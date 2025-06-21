@@ -19,12 +19,28 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+    }
+  };
+
+  const handleDownloadResume = () => {
+    // Create a downloadable link for resume
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You can replace this with actual resume URL
+    link.download = 'Shubham_Sharma_Resume.pdf';
+    link.click();
+  };
+
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "home" },
+    { name: "About", href: "about" },
+    { name: "Projects", href: "projects" },
+    { name: "Blog", href: "blog" },
+    { name: "Contact", href: "contact" },
   ];
 
   return (
@@ -35,10 +51,13 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a href="#home" className="flex items-center gap-2">
+        <button 
+          onClick={() => scrollToSection("home")} 
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+        >
           <Code className="h-7 w-7 text-android" />
           <span className="text-xl font-bold">TheDroidDev</span>
-        </a>
+        </button>
 
         {/* Mobile Menu Button */}
         <Button
@@ -53,15 +72,18 @@ const Navbar = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <button
               key={link.name}
-              href={link.href}
-              className="text-sm font-medium transition-colors hover:text-android"
+              onClick={() => scrollToSection(link.href)}
+              className="text-sm font-medium transition-colors hover:text-android cursor-pointer"
             >
               {link.name}
-            </a>
+            </button>
           ))}
-          <Button className="bg-android text-white hover:bg-android-dark">
+          <Button 
+            className="bg-android text-white hover:bg-android-dark"
+            onClick={handleDownloadResume}
+          >
             Download Resume
           </Button>
         </nav>
@@ -71,16 +93,18 @@ const Navbar = () => {
           <div className="fixed inset-0 top-[72px] bg-white z-50 md:hidden animate-fade-in">
             <nav className="flex flex-col items-center gap-6 p-8">
               {navLinks.map((link) => (
-                <a
+                <button
                   key={link.name}
-                  href={link.href}
-                  className="text-lg font-medium transition-colors hover:text-android"
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => scrollToSection(link.href)}
+                  className="text-lg font-medium transition-colors hover:text-android cursor-pointer"
                 >
                   {link.name}
-                </a>
+                </button>
               ))}
-              <Button className="bg-android text-white hover:bg-android-dark">
+              <Button 
+                className="bg-android text-white hover:bg-android-dark"
+                onClick={handleDownloadResume}
+              >
                 Download Resume
               </Button>
             </nav>

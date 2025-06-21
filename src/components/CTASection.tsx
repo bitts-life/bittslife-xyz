@@ -4,6 +4,21 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Phone, Calendar, Download } from "lucide-react";
 
 const CTASection = () => {
+  const handleCall = () => {
+    window.open('tel:+919672460166', '_self');
+  };
+
+  const handleScheduleMeeting = () => {
+    window.open('https://calendly.com/shubhamoksharma', '_blank', 'noopener,noreferrer');
+  };
+
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = '/resume.pdf';
+    link.download = 'Shubham_Sharma_Resume.pdf';
+    link.click();
+  };
+
   return (
     <section className="py-20 bg-android-dark text-white relative overflow-hidden">
       {/* Enhanced Abstract Pattern Background */}
@@ -45,6 +60,7 @@ const CTASection = () => {
                 <p className="text-white/70 mb-4">Let's discuss your project requirements and goals</p>
                 <Button 
                   className="bg-android hover:bg-android/90 text-android-dark font-bold w-full"
+                  onClick={handleCall}
                 >
                   Call +91-9672460166
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -62,6 +78,7 @@ const CTASection = () => {
                 <p className="text-android-dark/70 mb-4">Schedule a detailed discussion about your Android project</p>
                 <Button 
                   className="bg-android-dark hover:bg-android-dark/90 text-white font-bold w-full"
+                  onClick={handleScheduleMeeting}
                 >
                   Schedule Now
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -77,6 +94,7 @@ const CTASection = () => {
                 <Button 
                   variant="outline" 
                   className="border-white/30 text-white hover:bg-white/10 w-full"
+                  onClick={handleDownloadCV}
                 >
                   Get CV
                   <ArrowRight className="ml-2 h-4 w-4" />

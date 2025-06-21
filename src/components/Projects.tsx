@@ -11,34 +11,42 @@ const Projects = () => {
       description: "Developed the OmniScheduler Module for Walmart's app, reducing scheduling time for Oil & Tire Change services by 30% and increasing appointment bookings by 25%.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       tags: ["Kotlin", "MVVM", "Adapter Delegation", "ViewModels", "API Integration"],
-      github: "#",
-      liveDemo: "#",
+      github: "https://github.com/shubhamoksharma",
+      liveDemo: "https://play.google.com/store/apps/details?id=com.walmart.android",
     },
     {
       title: "BlueStone Mobile App",
       description: "Revamped Browse and Product pages, optimized app performance resulting in a 35% reduction in crash rates by integrating Firebase Crashlytics and reduced app size by 30%.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       tags: ["Kotlin", "Firebase", "Jetpack Compose", "ProGuard", "Analytics"],
-      github: "#",
-      liveDemo: "#",
+      github: "https://github.com/shubhamoksharma",
+      liveDemo: "https://play.google.com/store/apps/details?id=com.bluestone.android",
     },
     {
       title: "NoBroker Partner App",
       description: "Implemented Call Masking using Broadcast Receiver, securing user privacy. Integrated Adobe SDK for analytics and user engagement tracking.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
       tags: ["Firebase", "Broadcast Receiver", "Analytics", "Security"],
-      github: "#",
-      liveDemo: "#",
+      github: "https://github.com/shubhamoksharma",
+      liveDemo: "https://play.google.com/store/apps/details?id=com.nobroker.partner",
     },
     {
       title: "OpenUp App",
       description: "Built a business social network for SMEs with image editing, video sharing, and payment gateway features. Integrated multiple authentication methods.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       tags: ["Custom UI", "Payment Gateway", "Auth APIs", "Media Processing"],
-      github: "#",
-      liveDemo: "#",
+      github: "https://github.com/shubhamoksharma",
+      liveDemo: "https://github.com/shubhamoksharma",
     },
   ];
+
+  const handleGithubClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleDemoClick = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="projects" className="section-padding bg-white">
@@ -81,17 +89,22 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex justify-between">
-                  <Button variant="outline" size="sm" className="border-android text-android hover:bg-android/10" asChild>
-                    <a href={project.github} target="_blank" rel="noopener noreferrer">
-                      <Github className="h-4 w-4 mr-2" />
-                      Source
-                    </a>
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="border-android text-android hover:bg-android/10"
+                    onClick={() => handleGithubClick(project.github)}
+                  >
+                    <Github className="h-4 w-4 mr-2" />
+                    Source
                   </Button>
-                  <Button size="sm" className="bg-android text-white hover:bg-android-dark" asChild>
-                    <a href={project.liveDemo} target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      View Project
-                    </a>
+                  <Button 
+                    size="sm" 
+                    className="bg-android text-white hover:bg-android-dark"
+                    onClick={() => handleDemoClick(project.liveDemo)}
+                  >
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Project
                   </Button>
                 </div>
               </div>

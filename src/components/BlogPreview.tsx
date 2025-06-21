@@ -13,6 +13,7 @@ const BlogPreview = () => {
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
       date: "May 10, 2023",
       tags: ["Jetpack Compose", "UI/UX", "Android"],
+      url: "https://medium.com/@shubhamoksharma/jetpack-compose-guide"
     },
     {
       title: "Optimizing Android App Performance: The Complete Guide",
@@ -20,6 +21,7 @@ const BlogPreview = () => {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
       date: "April 22, 2023",
       tags: ["Performance", "Optimization", "Android"],
+      url: "https://medium.com/@shubhamoksharma/android-performance-guide"
     },
     {
       title: "Building Scalable Android Architecture with Clean Architecture",
@@ -27,8 +29,17 @@ const BlogPreview = () => {
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       date: "March 15, 2023",
       tags: ["Architecture", "MVVM", "Clean Code"],
+      url: "https://medium.com/@shubhamoksharma/clean-architecture-android"
     },
   ];
+
+  const handleReadMore = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const handleViewAllArticles = () => {
+    window.open('https://medium.com/@shubhamoksharma', '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section id="blog" className="section-padding bg-accent/50">
@@ -44,8 +55,9 @@ const BlogPreview = () => {
           {blogPosts.map((post, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden animate-fade-in bg-white border-none shadow-md hover:shadow-xl transition-all duration-300"
+              className="overflow-hidden animate-fade-in bg-white border-none shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer"
               style={{ animationDelay: `${index * 100}ms` }}
+              onClick={() => handleReadMore(post.url)}
             >
               <div className="h-48 overflow-hidden">
                 <img 
@@ -67,7 +79,14 @@ const BlogPreview = () => {
                 <p className="text-muted-foreground mb-4 line-clamp-3">{post.excerpt}</p>
               </CardContent>
               <CardFooter className="px-6 pb-6 pt-0">
-                <Button variant="ghost" className="group p-0 h-auto hover:bg-transparent">
+                <Button 
+                  variant="ghost" 
+                  className="group p-0 h-auto hover:bg-transparent"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleReadMore(post.url);
+                  }}
+                >
                   Read More
                   <ArrowRight className="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Button>
@@ -77,7 +96,11 @@ const BlogPreview = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Button size="lg" variant="outline">
+          <Button 
+            size="lg" 
+            variant="outline"
+            onClick={handleViewAllArticles}
+          >
             View All Articles
           </Button>
         </div>
