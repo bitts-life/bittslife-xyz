@@ -7,7 +7,7 @@ import Skills from "@/components/Skills";
 import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import ProcessSection from "@/components/ProcessSection";
-import Testimonials from "@/components/Testimonials";
+
 import Awards from "@/components/Awards";
 import BlogPreview from "@/components/BlogPreview";
 import CTASection from "@/components/CTASection";
@@ -34,7 +34,7 @@ const Index = () => {
       <TechStack />
       <Projects />
       <ProcessSection />
-      <Testimonials />
+      
       <Awards />
       <BlogPreview />
       <CTASection />
