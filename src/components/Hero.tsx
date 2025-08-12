@@ -122,7 +122,7 @@ const Hero = () => {
             {/* Simple circular profile */}
             <div className="w-full aspect-square max-w-md overflow-hidden rounded-full border-8 border-android/30 shadow-xl mx-auto">
               <img 
-                src="/public/user.jpg" 
+                src="/user.jpg" 
                 alt="Shubham Sharma - Android Developer" 
                 className="w-full h-full object-cover"
               />
