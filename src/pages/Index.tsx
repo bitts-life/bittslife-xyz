@@ -8,7 +8,7 @@ import TechStack from "@/components/TechStack";
 import Projects from "@/components/Projects";
 import ProcessSection from "@/components/ProcessSection";
 
-import Awards from "@/components/Awards";
+// import Awards from "@/components/Awards";
 import BlogPreview from "@/components/BlogPreview";
 import CTASection from "@/components/CTASection";
 import Contact from "@/components/Contact";
@@ -35,7 +35,7 @@ const Index = () => {
       <Projects />
       <ProcessSection />
       
-      <Awards />
+  {/* <Awards /> */}
       <BlogPreview />
       <CTASection />
       <Contact />

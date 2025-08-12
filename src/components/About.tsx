@@ -47,7 +47,7 @@ const About = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Passionate Android developer with a focus on creating high-performance, 
+            Hi, I'm Shubham Sharma, a passionate Android developer focused on creating high-performance, 
             scalable, and user-friendly mobile applications.
           </p>
         </div>
@@ -68,7 +68,7 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
             <div className="space-y-4">
               <p>
-                I'm an accomplished Android developer with 6+ years of experience in designing and 
+                I'm Shubham Sharma, an accomplished Android developer with 6+ years of experience in designing and 
                 developing high-performance, scalable mobile applications with millions of downloads.
               </p>
               <p>

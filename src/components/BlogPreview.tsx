@@ -8,29 +8,13 @@ import { ArrowRight } from "lucide-react";
 const BlogPreview = () => {
   const blogPosts = [
     {
-      title: "Mastering Jetpack Compose: From Basics to Advanced Patterns",
-      excerpt: "Explore the fundamentals of Jetpack Compose and learn how to implement advanced UI patterns that will take your Android apps to the next level.",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
-      date: "May 10, 2023",
-      tags: ["Jetpack Compose", "UI/UX", "Android"],
-      url: "https://medium.com/@shubhamoksharma/jetpack-compose-guide"
-    },
-    {
-      title: "Optimizing Android App Performance: The Complete Guide",
-      excerpt: "Discover actionable techniques to boost your Android app's performance, from memory management to rendering optimizations.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
-      date: "April 22, 2023",
-      tags: ["Performance", "Optimization", "Android"],
-      url: "https://medium.com/@shubhamoksharma/android-performance-guide"
-    },
-    {
-      title: "Building Scalable Android Architecture with Clean Architecture",
-      excerpt: "Learn how to implement Clean Architecture principles in your Android projects to create maintainable and testable codebases.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
-      date: "March 15, 2023",
-      tags: ["Architecture", "MVVM", "Clean Code"],
-      url: "https://medium.com/@shubhamoksharma/clean-architecture-android"
-    },
+      title: "Android Studio Default Lint Check: Analyze the Android App",
+      excerpt: "A practical guide to understanding and using Android Studio's default lint checks to improve your app's code quality and reliability.",
+  image: "https://images.pexels.com/photos/20895985/pexels-photo-20895985.jpeg?auto=compress&w=720&q=80",
+      date: "August 12, 2025",
+      tags: ["Android Studio", "Lint", "Best Practices"],
+      url: "https://medium.com/@bittslife/android-studio-default-lint-check-analyze-the-android-app-bf75b309012a"
+    }
   ];
 
   const handleReadMore = (url: string) => {
@@ -38,7 +22,7 @@ const BlogPreview = () => {
   };
 
   const handleViewAllArticles = () => {
-    window.open('https://medium.com/@shubhamoksharma', '_blank', 'noopener,noreferrer');
+    window.open('https://medium.com/@bittslife', '_blank', 'noopener,noreferrer');
   };
 
   return (
