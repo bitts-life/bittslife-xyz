@@ -25,22 +25,18 @@ const BTFinalCTA = () => {
               Be first in line when Brain Teaser AI lands on May 1.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
+              <span
+                aria-disabled="true"
+                className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2 pointer-events-none opacity-70 select-none"
               >
                 <Rocket className="h-5 w-5" /> Join Waitlist
-              </a>
-              <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bt-btn-outline rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
+              </span>
+              <span
+                aria-disabled="true"
+                className="bt-btn-outline rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2 pointer-events-none opacity-70 select-none"
               >
                 <Bell className="h-5 w-5" /> Notify Me
-              </a>
+              </span>
             </div>
           </div>
         </motion.div>

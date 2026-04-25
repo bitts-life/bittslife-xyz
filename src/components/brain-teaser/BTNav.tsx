@@ -18,7 +18,7 @@ const BTNav = () => {
       className="fixed top-0 inset-x-0 z-50 bt-glass"
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        <Link to="/brain-teaser" className="flex items-center gap-2 group">
+        <div className="flex items-center gap-2 group pointer-events-none select-none">
           <img
             src={logo}
             alt="Brain Teaser AI logo"
@@ -29,26 +29,24 @@ const BTNav = () => {
           <span className="font-bold text-lg tracking-tight">
             Brain Teaser <span className="bt-gradient-text">AI</span>
           </span>
-        </Link>
+        </div>
 
         <ul className="hidden md:flex items-center gap-8 text-sm text-white/70">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="hover:text-white transition-colors">
+              <span className="opacity-60 cursor-not-allowed select-none">
                 {l.label}
-              </a>
+              </span>
             </li>
           ))}
         </ul>
 
-        <a
-          href="https://wa.me/919672460166?text=Hi!%20I%20want%20to%20join%20the%20Brain%20Teaser%20AI%20Game%20waitlist"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bt-btn-primary rounded-full px-5 py-2 text-sm font-semibold hidden sm:inline-flex items-center"
+        <span
+          aria-disabled="true"
+          className="bt-btn-primary rounded-full px-5 py-2 text-sm font-semibold hidden sm:inline-flex items-center pointer-events-none opacity-70 select-none"
         >
           Join Waitlist
-        </a>
+        </span>
       </nav>
     </motion.header>
   );
