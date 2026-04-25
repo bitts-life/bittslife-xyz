@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logo from "@/assets/bt-logo.png";
 
 const BTFooter = () => {
@@ -5,22 +6,25 @@ const BTFooter = () => {
     <footer className="relative border-t border-white/10 py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 items-center">
-          <div className="flex items-center gap-2 pointer-events-none select-none">
+          <Link to="/brain-teaser" className="flex items-center gap-2">
             <img src={logo} alt="Brain Teaser AI logo" width={36} height={36} className="h-9 w-9 rounded-lg object-cover" />
             <span className="font-bold">Brain Teaser <span className="bt-gradient-text">AI</span></span>
-          </div>
+          </Link>
 
           <nav className="flex gap-6 justify-center text-sm text-white/60">
-            <span className="opacity-60 cursor-not-allowed select-none">Features</span>
-            <span className="opacity-60 cursor-not-allowed select-none">Modes</span>
-            <span className="opacity-60 cursor-not-allowed select-none">Waitlist</span>
+            <a href="#/brain-teaser" className="hover:text-white transition-colors">Features</a>
+            <a href="#/brain-teaser" className="hover:text-white transition-colors">Modes</a>
+            <a href="#/brain-teaser" className="hover:text-white transition-colors">Waitlist</a>
           </nav>
 
           <div className="text-sm text-white/60 md:text-right">
             A project by{" "}
-            <span className="bt-gradient-text font-semibold opacity-70 cursor-not-allowed select-none">
+            <a
+              href="https://www.bittslife.xyz/"
+              className="bt-gradient-text font-semibold hover:underline"
+            >
               bittslife.xyz
-            </span>
+            </a>
           </div>
         </div>
         <div className="border-t border-white/5 mt-8 pt-6 text-center text-xs text-white/40">

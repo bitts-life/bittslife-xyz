@@ -55,15 +55,16 @@ const BTHero = () => {
               transition={{ duration: 0.7, delay: 0.3 }}
               className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start"
             >
-              <span
-                aria-disabled="true"
-                className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2 pointer-events-none opacity-70 select-none"
+              <a
+                className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
               >
                 <Rocket className="h-5 w-5" />
                 Coming May 1
-              </span>
+              </a>
               <a
-                href="#waitlist"
+                href={WHATSAPP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
                 className="bt-btn-outline rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
               >
                 Join Early Access

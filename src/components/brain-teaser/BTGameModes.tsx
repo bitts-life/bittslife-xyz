@@ -81,12 +81,12 @@ const BTGameModes = () => {
           {modes.map((m) => (
             <button
               key={m.id}
-              disabled
+              onClick={() => setActive(m.id)}
               className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${
                 active === m.id
                   ? "bt-btn-primary"
                   : "bt-btn-outline"
-              } pointer-events-none opacity-60 cursor-not-allowed`}
+              } `}
             >
               {m.name}
             </button>

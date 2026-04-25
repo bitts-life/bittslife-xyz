@@ -91,8 +91,7 @@ const BTCountdown = () => {
             </div>
             <button
               type="submit"
-              disabled
-              className="bt-btn-primary rounded-full px-6 py-3 font-semibold inline-flex items-center justify-center gap-2 pointer-events-none opacity-60 cursor-not-allowed"
+              className="bt-btn-primary rounded-full px-6 py-3 font-semibold inline-flex items-center justify-center gap-2"
             >
               Notify Me <ArrowRight className="h-4 w-4" />
             </button>
