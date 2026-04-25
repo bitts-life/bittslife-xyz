@@ -2,8 +2,9 @@
 import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Sparkles, Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+import brainIcon from "@/assets/brain-teaser-icon.png";
 
 const Projects = () => {
   const projects = [
@@ -62,6 +63,41 @@ const Projects = () => {
             Here are some of my key Android development projects, showcasing my skills and experience with major brands.
           </p>
         </div>
+
+        {/* Featured: Brain Teaser AI Game */}
+        <Link
+          to="/brain-teaser"
+          className="group block mb-10 rounded-2xl overflow-hidden relative border border-purple-500/20 hover:border-purple-500/60 transition-all hover:shadow-2xl"
+          style={{
+            background:
+              "linear-gradient(135deg, hsl(240 30% 8%), hsl(260 40% 14%) 50%, hsl(220 50% 12%))",
+          }}
+        >
+          <div className="grid md:grid-cols-[1fr_auto] gap-6 p-6 md:p-8 items-center">
+            <div className="text-white">
+              <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-cyan-300 mb-3">
+                <Sparkles className="h-3.5 w-3.5" /> New · Coming May 1
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                Brain Teaser <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">AI Game</span>
+              </h3>
+              <p className="text-white/70 mb-4 max-w-xl">
+                Endless AI-powered IQ puzzles, 10+ mini games, daily challenges, and adaptive difficulty. Now in closed beta.
+              </p>
+              <div className="inline-flex items-center gap-2 text-sm font-semibold text-cyan-300 group-hover:gap-3 transition-all">
+                <Brain className="h-4 w-4" /> Explore the launch page →
+              </div>
+            </div>
+            <img
+              src={brainIcon}
+              alt="Brain Teaser AI Game icon"
+              width={160}
+              height={160}
+              loading="lazy"
+              className="h-32 w-32 md:h-40 md:w-40 object-contain mx-auto drop-shadow-[0_0_30px_rgba(168,85,247,0.5)] group-hover:scale-110 transition-transform"
+            />
+          </div>
+        </Link>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
