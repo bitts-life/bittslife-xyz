@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Bell, Rocket } from "lucide-react";
 
+const WHATSAPP_URL = "https://wa.me/919672460166?text=Hi!%20I%20want%20to%20join%20the%20Brain%20Teaser%20AI%20Game%20waitlist%20%F0%9F%9A%80";
+
 const BTFinalCTA = () => {
   return (
     <section className="relative py-24">
@@ -23,10 +25,20 @@ const BTFinalCTA = () => {
               Be first in line when Brain Teaser AI lands on May 1.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a href="#waitlist" className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
+              >
                 <Rocket className="h-5 w-5" /> Join Waitlist
               </a>
-              <a href="#waitlist" className="bt-btn-outline rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bt-btn-outline rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
+              >
                 <Bell className="h-5 w-5" /> Notify Me
               </a>
             </div>

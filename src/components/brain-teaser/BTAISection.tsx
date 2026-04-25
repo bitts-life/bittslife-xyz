@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Cpu, Infinity as InfinityIcon, Sliders } from "lucide-react";
-import neural from "@/assets/neural-brain.jpg";
+import neural from "@/assets/bt-numbergame.png";
 
 const points = [
   { icon: Cpu, title: "Dynamic Puzzles", desc: "Generated on the fly — never repeat." },

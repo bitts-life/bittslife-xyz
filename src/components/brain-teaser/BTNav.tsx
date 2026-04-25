@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/bt-logo.png";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -19,10 +19,13 @@ const BTNav = () => {
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/brain-teaser" className="flex items-center gap-2 group">
-          <div className="relative h-9 w-9 rounded-lg bt-pulse-glow flex items-center justify-center"
-               style={{ background: "var(--bt-gradient)" }}>
-            <Brain className="h-5 w-5 text-white" />
-          </div>
+          <img
+            src={logo}
+            alt="Brain Teaser AI logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-lg bt-pulse-glow object-cover"
+          />
           <span className="font-bold text-lg tracking-tight">
             Brain Teaser <span className="bt-gradient-text">AI</span>
           </span>
@@ -39,7 +42,9 @@ const BTNav = () => {
         </ul>
 
         <a
-          href="#waitlist"
+          href="https://wa.me/919672460166?text=Hi!%20I%20want%20to%20join%20the%20Brain%20Teaser%20AI%20Game%20waitlist"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bt-btn-primary rounded-full px-5 py-2 text-sm font-semibold hidden sm:inline-flex items-center"
         >
           Join Waitlist

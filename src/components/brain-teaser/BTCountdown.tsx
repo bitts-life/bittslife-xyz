@@ -30,7 +30,9 @@ const BTCountdown = () => {
       toast.error("Please enter a valid email");
       return;
     }
-    toast.success("You're on the list! We'll send your early access link soon.");
+    toast.success("You're on the list! Opening WhatsApp to confirm your spot…");
+    const msg = encodeURIComponent(`Hi! Add me to the Brain Teaser AI Game waitlist. Email: ${email}`);
+    window.open(`https://wa.me/919672460166?text=${msg}`, "_blank", "noopener,noreferrer");
     setEmail("");
   };
 

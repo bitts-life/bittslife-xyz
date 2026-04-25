@@ -1,5 +1,5 @@
-import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/bt-logo.png";
 
 const BTFooter = () => {
   return (
@@ -7,10 +7,7 @@ const BTFooter = () => {
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8 items-center">
           <Link to="/brain-teaser" className="flex items-center gap-2">
-            <div className="h-9 w-9 rounded-lg flex items-center justify-center"
-                 style={{ background: "var(--bt-gradient)" }}>
-              <Brain className="h-5 w-5 text-white" />
-            </div>
+            <img src={logo} alt="Brain Teaser AI logo" width={36} height={36} className="h-9 w-9 rounded-lg object-cover" />
             <span className="font-bold">Brain Teaser <span className="bt-gradient-text">AI</span></span>
           </Link>
 

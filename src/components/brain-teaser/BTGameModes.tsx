@@ -1,6 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Hash, Calculator, Eye, Shuffle, Timer } from "lucide-react";
+import numberGame from "@/assets/bt-numbergame.png";
+import miniGames from "@/assets/bt-minigames.png";
+import homeScreen from "@/assets/bt-home.png";
+import appScreen from "@/assets/bt-app-screen.png";
 
 const modes = [
   {
@@ -10,6 +14,7 @@ const modes = [
     boost: "Logic",
     desc: "Spot the pattern. Predict what comes next. Train pure logical reasoning.",
     color: "270 95% 65%",
+    image: numberGame,
   },
   {
     id: "math",
@@ -18,6 +23,7 @@ const modes = [
     boost: "Speed",
     desc: "Lightning-fast arithmetic under pressure. Sharpen mental math.",
     color: "190 100% 60%",
+    image: miniGames,
   },
   {
     id: "memory",
@@ -26,6 +32,7 @@ const modes = [
     boost: "Memory",
     desc: "Snapshots vanish in seconds — recall sequences with precision.",
     color: "320 95% 65%",
+    image: appScreen,
   },
   {
     id: "odd",
@@ -34,6 +41,7 @@ const modes = [
     boost: "Focus",
     desc: "Find the outlier in a sea of shapes, colors, and numbers.",
     color: "220 100% 65%",
+    image: miniGames,
   },
   {
     id: "reaction",
@@ -42,6 +50,7 @@ const modes = [
     boost: "Reflex",
     desc: "Tap the second the signal flashes. Push your reflexes.",
     color: "190 100% 60%",
+    image: homeScreen,
   },
 ];
 
@@ -117,17 +126,17 @@ const BTGameModes = () => {
                 </div>
               </div>
 
-              {/* Mock screen */}
+              {/* Real screenshot */}
               <div
-                className="aspect-[9/16] max-h-[420px] rounded-3xl border border-white/10 p-6 flex flex-col items-center justify-center text-center mx-auto w-full"
-                style={{
-                  background: `radial-gradient(circle at 50% 30%, hsl(${current.color} / 0.25), hsl(var(--bt-bg)) 70%)`,
-                  boxShadow: `inset 0 0 60px hsl(${current.color} / 0.15)`,
-                }}
+                className="relative rounded-3xl overflow-hidden border border-white/10 mx-auto w-full max-w-[320px]"
+                style={{ boxShadow: `0 20px 80px hsl(${current.color} / 0.35)` }}
               >
-                <Icon className="h-16 w-16 mb-4" style={{ color: `hsl(${current.color})` }} />
-                <div className="text-sm text-white/50 uppercase tracking-widest mb-2">Mode</div>
-                <div className="text-2xl font-bold">{current.name}</div>
+                <img
+                  src={current.image}
+                  alt={`${current.name} screenshot`}
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
               </div>
             </div>
           </motion.div>
