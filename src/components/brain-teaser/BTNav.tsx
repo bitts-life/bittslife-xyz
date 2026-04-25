@@ -42,7 +42,9 @@ const BTNav = () => {
         </ul>
 
         <a
-          href="#waitlist"
+          href="https://wa.me/919672460166?text=Hi!%20I%20want%20to%20join%20the%20Brain%20Teaser%20AI%20Game%20waitlist"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bt-btn-primary rounded-full px-5 py-2 text-sm font-semibold hidden sm:inline-flex items-center"
         >
           Join Waitlist
