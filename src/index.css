@@ -81,6 +81,123 @@
   }
 }
 
+/* ============================================ */
+/* Brain Teaser AI — Neon Dark Theme (scoped)   */
+/* ============================================ */
+.bt-theme {
+  --bt-bg: 240 30% 4%;
+  --bt-surface: 250 35% 8%;
+  --bt-surface-2: 255 30% 12%;
+  --bt-foreground: 220 40% 98%;
+  --bt-muted: 240 15% 70%;
+  --bt-border: 260 30% 20%;
+
+  --bt-purple: 270 95% 65%;
+  --bt-blue: 220 100% 65%;
+  --bt-cyan: 190 100% 60%;
+  --bt-pink: 320 95% 65%;
+
+  --bt-gradient: linear-gradient(135deg, hsl(var(--bt-purple)), hsl(var(--bt-blue)) 50%, hsl(var(--bt-cyan)));
+  --bt-gradient-soft: linear-gradient(135deg, hsl(var(--bt-purple) / 0.15), hsl(var(--bt-cyan) / 0.15));
+  --bt-glow: 0 0 40px hsl(var(--bt-purple) / 0.5), 0 0 80px hsl(var(--bt-blue) / 0.3);
+  --bt-glow-cyan: 0 0 30px hsl(var(--bt-cyan) / 0.6);
+
+  background: hsl(var(--bt-bg));
+  color: hsl(var(--bt-foreground));
+  color-scheme: dark;
+}
+
+.bt-theme .bt-gradient-text {
+  background: var(--bt-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 200%;
+  animation: bt-gradient-shift 6s ease infinite;
+}
+
+.bt-theme .bt-glass {
+  background: linear-gradient(135deg, hsl(var(--bt-surface) / 0.6), hsl(var(--bt-surface-2) / 0.4));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid hsl(var(--bt-border) / 0.5);
+}
+
+.bt-theme .bt-glow-card {
+  position: relative;
+  background: hsl(var(--bt-surface));
+  border: 1px solid hsl(var(--bt-border));
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.bt-theme .bt-glow-card:hover {
+  transform: translateY(-6px);
+  border-color: hsl(var(--bt-purple) / 0.6);
+  box-shadow: var(--bt-glow);
+}
+
+.bt-theme .bt-btn-primary {
+  position: relative;
+  background: var(--bt-gradient);
+  color: white;
+  background-size: 200% 200%;
+  animation: bt-gradient-shift 4s ease infinite;
+  box-shadow: 0 10px 30px -10px hsl(var(--bt-purple) / 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bt-theme .bt-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px -10px hsl(var(--bt-purple) / 0.8), var(--bt-glow-cyan);
+}
+
+.bt-theme .bt-btn-outline {
+  background: hsl(var(--bt-surface) / 0.6);
+  border: 1px solid hsl(var(--bt-border));
+  color: hsl(var(--bt-foreground));
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.bt-theme .bt-btn-outline:hover {
+  border-color: hsl(var(--bt-cyan) / 0.7);
+  box-shadow: var(--bt-glow-cyan);
+}
+
+.bt-theme .bt-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.bt-theme .bt-grid-bg {
+  background-image:
+    linear-gradient(hsl(var(--bt-purple) / 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, hsl(var(--bt-purple) / 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+}
+
+@keyframes bt-gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes bt-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(2deg); }
+}
+
+@keyframes bt-pulse-glow {
+  0%, 100% { box-shadow: 0 0 30px hsl(var(--bt-purple) / 0.4); }
+  50% { box-shadow: 0 0 80px hsl(var(--bt-cyan) / 0.6); }
+}
+
+.bt-theme .bt-float { animation: bt-float 6s ease-in-out infinite; }
+.bt-theme .bt-pulse-glow { animation: bt-pulse-glow 3s ease-in-out infinite; }
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
