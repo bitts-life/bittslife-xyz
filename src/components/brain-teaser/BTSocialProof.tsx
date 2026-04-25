@@ -4,7 +4,7 @@ import { Star, Users } from "lucide-react";
 const testimonials = [
   { name: "Rajat A.", role: "Beta Tester", text: "Genuinely addictive. Number Sequence ate my evening." },
   { name: "Dhruv M.", role: "Beta Tester", text: "The AI difficulty curve is uncanny — always just hard enough." },
-  { name: "Umage V.", role: "Beta Tester", text: "First brain app I've actually opened daily. Streak: 14 days." },
+  { name: "Umang V.", role: "Beta Tester", text: "First brain app I've actually opened daily. Streak: 14 days." },
 ];
 
 const BTSocialProof = () => {
