@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import { Brain } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/bt-logo.png";
 
 const links = [
   { label: "Features", href: "#features" },
@@ -19,10 +19,13 @@ const BTNav = () => {
     >
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <Link to="/brain-teaser" className="flex items-center gap-2 group">
-          <div className="relative h-9 w-9 rounded-lg bt-pulse-glow flex items-center justify-center"
-               style={{ background: "var(--bt-gradient)" }}>
-            <Brain className="h-5 w-5 text-white" />
-          </div>
+          <img
+            src={logo}
+            alt="Brain Teaser AI logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 rounded-lg bt-pulse-glow object-cover"
+          />
           <span className="font-bold text-lg tracking-tight">
             Brain Teaser <span className="bt-gradient-text">AI</span>
           </span>

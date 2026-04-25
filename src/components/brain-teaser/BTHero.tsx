@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Sparkles, Rocket } from "lucide-react";
-import mockup from "@/assets/brain-teaser-mockup.jpg";
+import mockup from "@/assets/bt-home.png";
 import ParticleField from "./ParticleField";
+
+const WHATSAPP_URL = "https://wa.me/919672460166?text=Hi!%20I%20want%20early%20access%20to%20Brain%20Teaser%20AI%20Game%20%F0%9F%A7%A0";
 
 const BTHero = () => {
   return (
@@ -54,7 +56,9 @@ const BTHero = () => {
               className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start"
             >
               <a
-                href="#waitlist"
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bt-btn-primary rounded-full px-8 py-4 font-semibold inline-flex items-center gap-2"
               >
                 <Rocket className="h-5 w-5" />
