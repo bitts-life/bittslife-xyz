@@ -6,6 +6,7 @@ import BTFeatures from "@/components/brain-teaser/BTFeatures";
 import BTGameModes from "@/components/brain-teaser/BTGameModes";
 import BTAISection from "@/components/brain-teaser/BTAISection";
 import BTBenefits from "@/components/brain-teaser/BTBenefits";
+import BTScreenshots from "@/components/brain-teaser/BTScreenshots";
 import BTSocialProof from "@/components/brain-teaser/BTSocialProof";
 import BTFinalCTA from "@/components/brain-teaser/BTFinalCTA";
 import BTFooter from "@/components/brain-teaser/BTFooter";
@@ -76,6 +77,7 @@ const BrainTeaser = () => {
         <BTGameModes />
         <BTAISection />
         <BTBenefits />
+        <BTScreenshots />
         <BTSocialProof />
         <BTFinalCTA />
       </main>
