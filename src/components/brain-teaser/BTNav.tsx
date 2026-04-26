@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/bt-logo.png";
 
 const links = [
-  { label: "Features", href: "#features" },
-  { label: "Game Modes", href: "#modes" },
-  { label: "AI", href: "#ai" },
-  { label: "Early Access", href: "#waitlist" },
+  { label: "Features", href: "#/brain-teaser" },
+  { label: "Game Modes", href: "#/brain-teaser" },
+  { label: "AI", href: "#/brain-teaser" },
+  { label: "Early Access", href: "#/brain-teaser" },
 ];
 
 const BTNav = () => {

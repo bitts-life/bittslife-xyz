@@ -2,15 +2,15 @@ import { motion } from "framer-motion";
 import home from "@/assets/bt-home.png";
 import mini from "@/assets/bt-minigames.png";
 import number from "@/assets/bt-numbergame.png";
-import app from "@/assets/bt-app-screen.png";
-import play from "@/assets/bt-playstore.png";
+import mnum from "@/assets/bt-find-missing-number.png";
+import sriddle from "@/assets/bt-solve-riddle.png";
 
 const shots = [
   { src: home, alt: "Brain Teaser home screen" },
-  { src: app, alt: "App dashboard" },
   { src: mini, alt: "Mini-games hub with 10 games" },
   { src: number, alt: "Number sequence puzzle" },
-  { src: play, alt: "Brain Teaser AI on Google Play" },
+  { src: mnum, alt: "Find the missing number" },
+  { src: sriddle, alt: "Solve the riddle" },
 ];
 
 const BTScreenshots = () => {
