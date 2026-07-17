@@ -47,7 +47,7 @@ const Hero = () => {
             THE <span className="text-android">DROID</span> DEV
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-lg">
-            Android Developer with 6+ years of experience in designing and developing high-performance, 
+            Android Developer with 7+ years of experience in designing and developing high-performance, 
             scalable mobile applications with millions of downloads.
           </p>
           
@@ -55,7 +55,7 @@ const Hero = () => {
             <ul className="space-y-2">
               {[
                 "Kotlin & Java Expert",
-                "6+ Years of Android Development",
+                "7+ Years of Android Development",
                 "90% Test Coverage Achievement",
                 "Reduced App Size by 30%"
               ].map((item, i) => (
