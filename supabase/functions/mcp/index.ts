@@ -98,9 +98,19 @@ var list_projects_default = defineTool4({
         url: "https://www.bittslife.xyz/#/brain-teaser"
       },
       {
-        name: "Walmart Grocery App",
-        role: "Senior Software Engineer",
-        description: "Contributed to Walmart's grocery Android app used by millions; improved test coverage to 90% and reduced production bugs by 50%."
+        name: "Experian Android App",
+        role: "Sr. Software Engineer (Android)",
+        description: "Built Personal Info SDUI components, Hosted App Flow for banks (Ollo, Merrick), and the Wallet Genius feature that recommends optimized cards by user goal."
+      },
+      {
+        name: "Walmart Protection Plan Hub",
+        role: "Sr. Software Engineer (Caspex)",
+        description: "Built the Protection Plan Hub and Amends flow, driving a 15% increase in protection plan adoption and letting customers edit purchases post-checkout."
+      },
+      {
+        name: "Walmart OmniScheduler",
+        role: "Consultant (Xebia)",
+        description: "Designed the OmniScheduler Module for Oil & Tire Change services, reducing scheduling time by 30% and increasing appointment bookings by 25%. Maintained 90%+ test coverage."
       },
       {
         name: "BlueStone App",
