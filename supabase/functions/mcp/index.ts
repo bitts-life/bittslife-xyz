@@ -16,11 +16,13 @@ var get_profile_default = defineTool({
   handler: () => {
     const profile = {
       name: "Shubham Sharma",
-      title: "Senior Android Developer",
+      title: "Sr. Software Engineer (Android) at Experian",
       location: "Bangalore, IN",
-      experience_years: 6,
-      summary: "Android Developer with 6+ years of experience designing and developing high-performance, scalable mobile applications with millions of downloads. Expertise in Kotlin, Jetpack, MVVM, and CI/CD.",
-      companies: ["Walmart", "BlueStone", "NoBroker"],
+      experience_years: 7,
+      summary: "Android Developer with 7+ years of experience designing and developing high-performance, scalable mobile applications with millions of downloads. Expertise in Kotlin, Jetpack, MVVM, and CI/CD. Reduced app size by 30%, achieved 90% test coverage.",
+      current_company: "Experian",
+      current_role: "Sr. Software Engineer (Android)",
+      companies: ["Experian", "Caspex (Walmart)", "Xebia (Walmart)", "BlueStone", "NoBroker", "Zonolith"],
       education: "B.Tech. in Computer Science, Rajasthan Technical University (2013-2017)",
       website: "https://www.bittslife.xyz/"
     };
@@ -96,9 +98,19 @@ var list_projects_default = defineTool4({
         url: "https://www.bittslife.xyz/#/brain-teaser"
       },
       {
-        name: "Walmart Grocery App",
-        role: "Senior Software Engineer",
-        description: "Contributed to Walmart's grocery Android app used by millions; improved test coverage to 90% and reduced production bugs by 50%."
+        name: "Experian Android App",
+        role: "Sr. Software Engineer (Android)",
+        description: "Built Personal Info SDUI components, Hosted App Flow for banks (Ollo, Merrick), and the Wallet Genius feature that recommends optimized cards by user goal."
+      },
+      {
+        name: "Walmart Protection Plan Hub",
+        role: "Sr. Software Engineer (Caspex)",
+        description: "Built the Protection Plan Hub and Amends flow, driving a 15% increase in protection plan adoption and letting customers edit purchases post-checkout."
+      },
+      {
+        name: "Walmart OmniScheduler",
+        role: "Consultant (Xebia)",
+        description: "Designed the OmniScheduler Module for Oil & Tire Change services, reducing scheduling time by 30% and increasing appointment bookings by 25%. Maintained 90%+ test coverage."
       },
       {
         name: "BlueStone App",

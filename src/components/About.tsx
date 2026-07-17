@@ -5,17 +5,31 @@ import { Calendar, Briefcase, Book, Award } from "lucide-react";
 
 const About = () => {
   const stats = [
-    { value: "6+", label: "Years Experience" },
+    { value: "7+", label: "Years Experience" },
     { value: "90%", label: "Test Coverage" },
     { value: "30%", label: "App Size Reduction" },
   ];
 
   const experiences = [
     {
-      title: "Android Consultant",
-      company: "Walmart (via Xebia)",
-      period: "Oct 2023 - Present",
-      description: "Working on the Walmart App focusing on Cart Checkout and Transactions (CXO). Designed and implemented the OmniScheduler Module, reducing scheduling time for Oil & Tire Change services by 30%.",
+      title: "Sr. Software Engineer (Android)",
+      company: "Experian",
+      period: "Nov 2025 - Present",
+      description: "Building Personal Info SDUI (Server Driven UI) components, Hosted App Flow for banks like Ollo and Merrick, and the Wallet Genius feature that suggests optimized cards based on user goals (Cashback, Travel Savings, etc.).",
+      icon: Briefcase,
+    },
+    {
+      title: "Sr. Software Engineer for Walmart",
+      company: "Caspex",
+      period: "May 2025 - Nov 2025",
+      description: "Built the Protection Plan Hub driving a 15% increase in protection plan adoption. Contributed to the Amends flow letting customers edit purchases post-checkout, using Clean Architecture (UseCase & Repository).",
+      icon: Briefcase,
+    },
+    {
+      title: "Consultant for Walmart (Android)",
+      company: "Xebia",
+      period: "Oct 2023 - May 2025",
+      description: "Worked on the Walmart App (Cart Checkout & Transactions). Designed the OmniScheduler Module — cutting scheduling time by 30% and boosting bookings by 25%. Maintained 90%+ test coverage and reduced critical production bugs by 50%.",
       icon: Briefcase,
     },
     {
@@ -30,6 +44,13 @@ const About = () => {
       company: "NoBroker",
       period: "Dec 2019 - June 2020",
       description: "Integrated Adobe SDK for analytics. Developed property recommendation features and implemented Call Masking for partner app security.",
+      icon: Briefcase,
+    },
+    {
+      title: "Android Developer",
+      company: "Zonolith",
+      period: "April 2018 - Dec 2019",
+      description: "Built the OpenUp App — a business social network for SMEs — with image editing, video sharing, payment gateway, and Google/Facebook/Phone authentication.",
       icon: Briefcase,
     },
     {
@@ -68,7 +89,7 @@ const About = () => {
             <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
             <div className="space-y-4">
               <p>
-                I'm Shubham Sharma, an accomplished Android developer with 6+ years of experience in designing and 
+                I'm Shubham Sharma, an accomplished Android developer with 7+ years of experience in designing and 
                 developing high-performance, scalable mobile applications with millions of downloads.
               </p>
               <p>
@@ -76,10 +97,10 @@ const About = () => {
                 of reducing app size by 30%, enhancing test coverage to 90%, and optimizing performance.
               </p>
               <p>
-                Throughout my career at companies like Xebia (Walmart), BlueStone, and NoBroker, 
-                I've specialized in application architecture, performance optimization, and delivering 
-                exceptional user experiences. I'm passionate about writing clean, maintainable, and 
-                efficient code that solves real user problems.
+                Currently a Sr. Software Engineer (Android) at Experian, with prior experience at 
+                Caspex and Xebia (both consulting for Walmart), BlueStone, and NoBroker. I specialize 
+                in application architecture, performance optimization, and delivering exceptional user 
+                experiences through clean, maintainable code.
               </p>
               <div className="mt-6 bg-android/10 p-4 rounded-lg">
                 <h4 className="font-semibold mb-2 flex items-center gap-2">
