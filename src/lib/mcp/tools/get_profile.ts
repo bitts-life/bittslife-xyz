@@ -10,12 +10,14 @@ export default defineTool({
   handler: () => {
     const profile = {
       name: "Shubham Sharma",
-      title: "Senior Android Developer",
+      title: "Sr. Software Engineer (Android) at Experian",
       location: "Bangalore, IN",
-      experience_years: 6,
+      experience_years: 7,
       summary:
-        "Android Developer with 6+ years of experience designing and developing high-performance, scalable mobile applications with millions of downloads. Expertise in Kotlin, Jetpack, MVVM, and CI/CD.",
-      companies: ["Walmart", "BlueStone", "NoBroker"],
+        "Android Developer with 7+ years of experience designing and developing high-performance, scalable mobile applications with millions of downloads. Expertise in Kotlin, Jetpack, MVVM, and CI/CD. Reduced app size by 30%, achieved 90% test coverage.",
+      current_company: "Experian",
+      current_role: "Sr. Software Engineer (Android)",
+      companies: ["Experian", "Caspex (Walmart)", "Xebia (Walmart)", "BlueStone", "NoBroker", "Zonolith"],
       education: "B.Tech. in Computer Science, Rajasthan Technical University (2013-2017)",
       website: "https://www.bittslife.xyz/",
     };
